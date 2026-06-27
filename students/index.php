@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
 $stream_filter = $_GET['stream_id'] ?? '';
-$where = $stream_filter ? "WHERE s.stream_id = " . (int)$stream_filter : '';
+$where = $stream_filter ? "WHERE s.stream_id = " . (int)$stream_filter : ''; 
 $students = $pdo->query("
     SELECT s.*, st.name AS stream, c.name AS class
     FROM students s

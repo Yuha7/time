@@ -83,7 +83,7 @@ require_once dirname(__DIR__) . '/layout_header.php';
   <div class="card">
     <div class="card-body p-0">
       <table class="table table-hover mb-0">
-        <thead class="table-light"><tr><th>#</th><th>Name</th><th>Email</th><th>Phone</th><th>Status</th><th>Actions</th></tr></thead>
+        <thead class="table-light"><tr><th>#</th><th>No.</th><th>ID</th><th>NAME</th><th>Status</th><th>Actions</th></tr></thead>
         <tbody>
         <?php foreach($teachers as $i=>$t): ?>
         <tr>
@@ -112,9 +112,9 @@ require_once dirname(__DIR__) . '/layout_header.php';
   <form method="POST">
   <input type="hidden" name="action" value="add">
   <div class="modal-body row g-3">
-    <div class="col-12"><label class="form-label">Full Name</label><input type="text" name="name" class="form-control" required></div>
-    <div class="col-12"><label class="form-label">Email</label><input type="email" name="email" class="form-control" required></div>
-    <div class="col-md-6"><label class="form-label">Phone</label><input type="text" name="phone" class="form-control"></div>
+    <div class="col-12"><label class="form-label">No.</label><input type="text" name="no." class="form-control" required></div>
+    <div class="col-12"><label class="form-label">ID</label><input type="email" name="id" class="form-control" required></div>
+    <div class="col-md-6"><label class="form-label">FULL NAME</label><input type="text" name="fullName" class="form-control"></div>
     <div class="col-md-6"><label class="form-label">Password</label><input type="password" name="password" class="form-control" required></div>
   </div>
   <div class="modal-footer"><button class="btn btn-primary">Save</button></div>
@@ -128,9 +128,9 @@ require_once dirname(__DIR__) . '/layout_header.php';
   <input type="hidden" name="action" value="edit">
   <input type="hidden" name="id" id="edit_id">
   <div class="modal-body row g-3">
-    <div class="col-12"><label class="form-label">Full Name</label><input type="text" name="name" id="edit_name" class="form-control" required></div>
-    <div class="col-12"><label class="form-label">Email</label><input type="email" name="email" id="edit_email" class="form-control" required></div>
-    <div class="col-md-6"><label class="form-label">Phone</label><input type="text" name="phone" id="edit_phone" class="form-control"></div>
+    <div class="col-12"><label class="form-label">No.</label><input type="text" name="no." id="edit_no." class="form-control" required></div>
+    <div class="col-12"><label class="form-label">ID</label><input type="text" name="id" id="edit_id" class="form-control" required></div>
+    <div class="col-md-6"><label class="form-label">Full name</label><input type="text" name="fullName" id="edit_name" class="form-control"></div>
     <div class="col-md-6"><label class="form-label">New Password <small class="text-muted">(leave blank to keep)</small></label><input type="password" name="password" class="form-control"></div>
   </div>
   <div class="modal-footer"><button class="btn btn-primary">Update</button></div>
